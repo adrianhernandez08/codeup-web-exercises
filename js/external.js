@@ -3,7 +3,8 @@ function totalPrice() {
     let brotherBear = prompt("How many days did you rent Brother Bear?");
     let hercules = prompt("How many days did you rent Hercules?");
     let pricePerDay = 3
-    let totalPrice = (Number(litleMermaid) + Number(brotherBear) + Number(hercules));
+    let totalPrice = (Number(littleMermaid * pricePerDay) + Number(brotherBear * pricePerDay) + Number(hercules) * pricePerDay);
+    return totalPrice
 }
 alert("Your total rental price is " + "$" + totalPrice());
 
