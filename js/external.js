@@ -1,7 +1,7 @@
-
-console.log("Hello from external JavaScript")
-alert("Welcome to my Website!")
-prompt("What is your favorite color?")
-favoriteColor = prompt("What is your favorite color?")
-alert("Great, my favorite color is" + favoriteColor + "also.")
+let littleMermaid = prompt("How many days did you rent Little Mermaid?");
+let brotherBear = prompt("How many days did you rent Brother Bear?");
+let hercules = prompt("How many days did you rent Hercules?");
+let pricePerDay = 3
+let totalPrice = (Number(litleMermaid) + Number(brotherBear) + Number(hercules));
+alert("Your total rental price is " + "$" + totalPrice());
 
