@@ -15,8 +15,12 @@ function totalPay() {
     let googlePay = 400;
     let amazonPay = 380;
     let facbookPay = 350;
-    let totalPay = (Number(google * googlePay) + (amazon * amazonPay) + (facebook * facebookPay));
+    let totalPay = (Number(google * googlePay) + (Number(amazon * amazonPay) + (Number(facebook * facebookPay));
     return totalPay;
 }
-alert("Your total pay for the week is $ " + totalPay.);
+alert("Your total pay for the week is $ " + totalPay".");
+
+
+
+
 
