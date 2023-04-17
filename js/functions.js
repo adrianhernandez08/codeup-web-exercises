@@ -9,11 +9,10 @@
 * > sayHello("codeup") // returns "Hello, codeup!"
 */
 
-    function sayHello() {
-        let name= prompt("What is your name?");
-        return sayHello;
+    function sayHello(name) {
+        return "Hello " + name;
     }
-    alert("Hello, " + name());
+    console.log(sayHello("Adrian"));
 
 /**
 * TODO:
@@ -29,6 +28,7 @@ function helloMessage() {
     return helloMessage;
 }
 alert("Hello, " + name());
+console.log 'helloMessage'
 /**
 * TODO:
 * Store your name as a string in a variable named 'myName', and pass that
@@ -37,6 +37,7 @@ alert("Hello, " + name());
 */
 var myName("Adrian");
  sayHello + myName;
+console.log 'helloMessage'
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -58,11 +59,12 @@ var random = Math.floor((Math.random() * 3) + 1);
 * different result everytime you refresh the page if you are using the random
 * number)
 */
-function isTwo() {
-    let random= prompt("What is your random number?");
-    return isTwo;
 
+function isTwo(X) {
+    return Number(x)=== 2;
 }
+console.log(isTwo(random));
+
 /**
 * TODO:
 * Create a function named 'calculateTip' to calculate a tip on a bill at a

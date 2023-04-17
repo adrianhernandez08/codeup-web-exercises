@@ -30,6 +30,17 @@ function schedule(){
     } else{
         alert("Sorry, you will not be able to attend this class.");
     }
+
+
+
+    function discount() {
+        let offer =  confirm("is the discount still valid");
+        let premium = confirm("are you a premium member?")
+        let itemsPurchases = prompt("how many items did you purchase?")
+        if (premium === true || parseFloat(itemsPurchases) > 2) && offer === true ) { alert("Please enjoy your discount");
+    } else {
+    alert("Please become a member or purchase more than 2 items to enjoy the discount");}
+        }
 }
 
 
