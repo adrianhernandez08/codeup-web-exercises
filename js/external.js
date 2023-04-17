@@ -9,16 +9,16 @@ function totalPrice() {
 alert("Your total rental price is " + "$" + totalPrice());
 
 function totalPay() {
-    let google = prompt("How many hours did you work for Gooogle?");
-    let amazon = prompt("How many hours did you work for Amazon?");
-    let facebook = prompt("How many hours did you work for Facebook?");
-    let googlePay = 400;
-    let amazonPay = 380;
-    let facbookPay = 350;
-    let totalPay = (Number(google * googlePay) + (Number(amazon * amazonPay) + (Number(facebook * facebookPay));
-    return totalPay;
+    let google = prompt("How many hours did you work for Google?")
+    let amazon = prompt("How many hours did you work for Amazon?")
+    let facebook = prompt("How many hours did you work for Facebook?")
+    let googlePay = 400
+    let amazonPay = 380
+    let facebookPay = 350
+    let totalPay = (Number(google * googlePay) + Number(amazon * amazonPay) + Number(facebook * facebookPay))
+    return totalPay
 }
-alert("Your total pay for the week is $ " + totalPay".");
+alert("Your total pay for the week is $ " + totalPay + ".")
 
 
 
