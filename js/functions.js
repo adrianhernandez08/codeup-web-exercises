@@ -10,9 +10,8 @@
 */
 
     function sayHello(name) {
-        return "Hello " + name;
+        return "Hello, " + name;
     }
-    console.log(sayHello("Adrian"));
 
 /**
 * TODO:
@@ -23,21 +22,16 @@
  *
 * console.log 'helloMessage' to check your work
 */
-function helloMessage() {
-    let name= prompt("What is your name?");
-    return helloMessage;
-}
-alert("Hello, " + name());
-console.log 'helloMessage'
+var helloMessage = sayHello("Adrian");
+console.log (helloMessage);
 /**
 * TODO:
 * Store your name as a string in a variable named 'myName', and pass that
 * variable to the 'sayHello' function. You should see the same output in the
 * console.
 */
-var myName("Adrian");
- sayHello + myName;
-console.log 'helloMessage'
+var myName ="Adrian";
+console.log(sayHello(myName));;
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -60,8 +54,8 @@ var random = Math.floor((Math.random() * 3) + 1);
 * number)
 */
 
-function isTwo(X) {
-    return Number(x)=== 2;
+function isTwo(number) {
+    return number === 2;
 }
 console.log(isTwo(random));
 
@@ -76,12 +70,14 @@ console.log(isTwo(random));
 * > calculateTip(0.25, 25.50) // returns 6.375
 * > calculateTip(0.15, 33.42) // returns 5.013
 */
-function calculateTip() {
-    let bill = prompt("How much was your bill?")
-    return calculateTip
+function calculateTip(total, tipPercent) {
+    return total * tipPercent;
 
 }
-alert("Your total bill is $" + (bill));
+console.log(calculateTip(.20, 20));
+console.log(calculateTip(.25, 25.50));
+console.log(calculateTip(.15, 33.42));
+
 
 /**
 * TODO:
@@ -89,13 +85,10 @@ alert("Your total bill is $" + (bill));
 * prompt the user for the bill total and a percentage they would like to tip,
 * then display the dollar amount they should tip
 */
-function percentTip() {
-    let tip = prompt("How much percentage would you like to tip?")
-    let tipTotal = bill * (tip/100);
-    return percentTip
+var input1 = prompt("please enter your bill total");
+var input2 = prompt("please enter the tip percentage");
 
-}
-alert("Your total tip should be $" + (tipTotal))
+alert("Your total tip should be $" + calculateTip(input1, input2))
 /**
 * TODO:
 * Create a function named `applyDiscount`. This function should accept a price
