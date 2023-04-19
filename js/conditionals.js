@@ -165,7 +165,7 @@ if(confirm("would you like to enter a number?")) {
     }
     if (userInput >= 0) {
         alert("the number " + userInput + " is positive");
-    } else {
+    } else if (userInput<0){
         alert("your number " + userInput + " is negative");
     } else {
         alert("That was not a number");
