@@ -64,6 +64,10 @@
         console.log(shopper.name + " spent $" + amountBefore.toFixed(2) + ", got a discount of $" + discount.toFixed(2) + ", and needs to pay $" + amountAfter.toFixed(2));
     })
 
+    ///Cody's lecture walkthrough
+    // for (let i = 0; i < 3 ; i++ ){
+
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -77,6 +81,12 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+   // title:
+   //      author: {
+   //          firstName:
+   //          lastName:
+   //      }
+
     {
         let books = [
             {title: 'Mess Around', authorFirst: 'Peppa', authorLast: 'Pig'},
@@ -86,6 +96,7 @@
             {title: 'Funny Movie', authorFirst: 'Laugh', authorLast: 'Debate'}
         ]
     }
+
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -110,7 +121,17 @@
      *      ---
      *      ...
      */
+    // books.forEach(function (book, index){
+    //     console.log("Book # " + (index + 1) + "\n" + "Title:" + books.title + "\n" + "Author: " + books.firstName + (" ") + books.lastName)
+    // })
 
+    function createBook(title, firstName, lastName){
+        let bookObject = {
+            title: title,
+            firstName: firstName,
+            lastName: lastName
+        }
+    }
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
