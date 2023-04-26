@@ -179,9 +179,10 @@ if(confirm("would you like to enter a number?")) {
 //         prompt("What Number would you like to enter?");
 //     }
 // }
-// let askedNumber = (givenNumber)
-// function isEven(askedNumber){
-//         if (askedNumber % 2 === 0);{
-//         alert("Your number is even");
-//         } else {
-//         alert("Your number is odd");{
+let askedNumber = (givenNumber)
+function isEven(askedNumber){
+        if (askedNumber % 2 === 0);{
+        alert("Your number is even");
+        } else {
+        alert("Your number is odd");
+    }
