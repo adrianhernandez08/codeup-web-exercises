@@ -6,7 +6,7 @@
 * When called, the function should return a message that says hello to the passed in name.
  *
 * Example
-* > sayHello("codeup") // returns "Hello, codeup!"
+* > sayHello("Codeup") // returns "Hello, Codeup!"
 */
 
     function sayHello(name) {
@@ -22,7 +22,7 @@
  *
 * console.log 'helloMessage' to check your work
 */
-var helloMessage = sayHello("Adrian");
+let helloMessage = sayHello("Adrian");
 console.log (helloMessage);
 /**
 * TODO:
@@ -30,12 +30,13 @@ console.log (helloMessage);
 * variable to the 'sayHello' function. You should see the same output in the
 * console.
 */
-var myName ="Adrian";
-console.log(sayHello(myName));;
+let myName ="Adrian";
+
+console.log(sayHello(myName));
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
-var random = Math.floor((Math.random() * 3) + 1);
+let random = Math.floor((Math.random() * 3) + 1);
 
 /**
 * TODO:
@@ -71,7 +72,7 @@ console.log(isTwo(random));
 * > calculateTip(0.15, 33.42) // returns 5.013
 */
 function calculateTip(total, tipPercent) {
-    return total * tipPercent;
+    return ( total * (tipPercent/100));
 
 }
 console.log(calculateTip(.20, 20));
@@ -85,8 +86,8 @@ console.log(calculateTip(.15, 33.42));
 * prompt the user for the bill total and a percentage they would like to tip,
 * then display the dollar amount they should tip
 */
-var input1 = prompt("please enter your bill total");
-var input2 = prompt("please enter the tip percentage");
+let input1= prompt("please enter your bill total");
+let input2= prompt("please enter the tip percentage");
 
 alert("Your total tip should be $" + calculateTip(input1, input2))
 /**
@@ -103,11 +104,16 @@ alert("Your total tip should be $" + calculateTip(input1, input2))
 *
 * > applyDiscount(45.99, 0.12) // 40.4712
 */
-function applyDiscount() {
-    let discount = prompt("How much discount is given?")
-    let discountPercentage = bill * (discount/100);
-    let discountAfter = bill - discountPercentage;
-    return applyDiscount
 
-}
-alert("Your total after discount is " + (discountAfter));
+let originalPrice = (prompt("what is your original price?"));
+let discountPercent = (prompt("what is your discount percent is decimal form?"));
+let discountCalc = (originalPrice - (discountPercent * 100));
+function applyDiscount(originalPrice, discountPercent) {{
+    alert("your total before discount is $" + originalPrice);
+    alert("your total discount is $" + discountCalc);
+    alert("your new total with the discount applies is $" + (originalPrice - discountCalc));
+    {
+    }
+}}
+
+console.log(applyDiscount(45.99, .12));
