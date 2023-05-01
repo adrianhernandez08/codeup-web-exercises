@@ -1,11 +1,14 @@
 //
 //......multiply by two.........
 //
-// var i = 2;
-// while (i <= 65536) {
-//     console.log (i);
-//     i *= 2;
-// }
+(function(){
+   let i = 2;
+    while (i <= 65536) {
+        console.log(i);
+        i *= 2;
+    }
+})();
+
 //
 //david's answer
 
