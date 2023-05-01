@@ -1,76 +1,76 @@
-// 'use strict'
+'use strict'
 
-// //2...multiplication table
-//     const number = parseInt(prompt("enter a number"));
-//     for (let i = 1; i <= 10; i++) ;
-//     {
-//         const result = i * number;
-//         console.log(`${number} * ${i} = ${result}`);
-//     }
-//2. david's answer
-// (function(){
-//     function showMultiplicationTable(num){
-//         for(let i = 1; i <= 10; i++ ) {
-//             console.log(`${num} * ${i} = ${num * i}`);
-//         }
-//     }
-//     showMultiplicationTable(7);
-//     showMultiplicationTable(11);
-// })();
-//3....even or odd (random numbers).........................
-// {
-//        var number = Math.floor((Math.random()* 200) + 1);
-//
-//         if (number % 2 == 0) {
-//             console.log(number + " is an even number");
-//         } else {
-//             console.log("an odd number is " + number);
-//         }
-//     }
-// david's answer
-//     for (let i =1; i < 11; i++) {
-//         let randomNum = Math.floor(Math.random() * 181) + 20;
-//     if (randomNum % 2 === 0) {
-//         console.log(`${randomNum} is even`);
-//     } else {
-//         console.log(`${randomNum} is odd`);
-//     }
-//     }
+//2...multiplication table
+    const number = parseInt(prompt("enter a number"));
+    for (let i = 1; i <= 10; i++) ;
+    {
+        const result = i * number;
+        console.log(`${number} * ${i} = ${result}`);
+    }
+2. david's answer
+(function(){
+    function showMultiplicationTable(num){
+        for(let i = 1; i <= 10; i++ ) {
+            console.log(`${num} * ${i} = ${num * i}`);
+        }
+    }
+    showMultiplicationTable(7);
+    showMultiplicationTable(11);
+})();
+3....even or odd (random numbers).........................
+{
+       var number = Math.floor((Math.random()* 200) + 1);
 
-//4.........number christmas tree
-//
-// for (let i = 1; i <= 9; i++) {
-//     var res = [];
-//     for (a = 1; a <= i; a++){
-//         res.push(i);
-//     }
-//     console.log(res.join(""));
-// }
-// david's answer
-// for (let i = 1; i < 10; i++) {
-//     let output = "";
-//     for (a = 1; a <=i; a++){
-//         output += i;
-//     }
-//     console.log(output);
-// }
+        if (number % 2 == 0) {
+            console.log(number + " is an even number");
+        } else {
+            console.log("an odd number is " + number);
+        }
+    }
+david's answer
+    for (let i =1; i < 11; i++) {
+        let randomNum = Math.floor(Math.random() * 181) + 20;
+    if (randomNum % 2 === 0) {
+        console.log(`${randomNum} is even`);
+    } else {
+        console.log(`${randomNum} is odd`);
+    }
+    }
 
-// for (let i = 1; i < 10; i++) {
-//     console.log(i.toString().repeat(i));
-// }
+4.........number christmas tree
 
-//5......... count down by 5.......
-// for (i = 100; i > 0; i -=5){
-//     console.log(i);
-// }
+for (let i = 1; i <= 9; i++) {
+    var res = [];
+    for (a = 1; a <= i; a++){
+        res.push(i);
+    }
+    console.log(res.join(""));
+}
+david's answer
+for (let i = 1; i < 10; i++) {
+    let output = "";
+    for (a = 1; a <=i; a++){
+        output += i;
+    }
+    console.log(output);
+}
 
-// let sum = 5;
-// do {
-//     console.log(sum);
-//     sum += 5;
-// } while (sum < 100)
+for (let i = 1; i < 10; i++) {
+    console.log(i.toString().repeat(i));
+}
 
-//david's answer
-// for (let i = 100; i > 0; i -= 5);{
-//     console.log(i);
-// }
+5......... count down by 5.......
+for (i = 100; i > 0; i -=5){
+    console.log(i);
+}
+
+let sum = 5;
+do {
+    console.log(sum);
+    sum += 5;
+} while (sum < 100)
+
+david's answer
+for (let i = 100; i > 0; i -= 5);{
+    console.log(i);
+}
