@@ -65,15 +65,9 @@ for (let i = 1; i <= 9; i++) {
 // }
 //
 // 5......... count down by 5.......
-// for (i = 100; i > 0; i -=5){
-//     console.log(i);
-// }
-//
-// let sum = 5;
-// do {
-//     console.log(sum);
-//     sum += 5;
-// } while (sum < 100)
+for (let i = 100; i > 0; i -=5) {
+    console.log(i);
+}
 //
 // david's answer
 // for (let i = 100; i > 0; i -= 5);{
