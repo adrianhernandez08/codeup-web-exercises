@@ -1,12 +1,12 @@
 html {
     background-color:   mistyrose;
-    background-image: url("../img/elephants.jpg");
+    background-image: url("../img/fiesta.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 h1{
-    color:red;
+    color:forestgreen;
     text-decoration: underline;
 }
 h2{
@@ -36,12 +36,13 @@ ul li{
 body{
     font-family: "Sofia, sans-serif";
 }
-table {
+table, th, td {
     table-layout: fixed;
     width: 100%;
     border-collapse: collapse;
     border: 3px solid darkorchid;
     background-color: antiquewhite;
+    border: 1px solid black;
 }
 img{
     border: 3px solid mistyrose;
@@ -59,3 +60,4 @@ a:hover{
 footer{
     text-decoration-color: mediumturquoise;
 }
+html { height: 100%; }
