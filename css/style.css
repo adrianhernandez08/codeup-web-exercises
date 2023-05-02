@@ -1,9 +1,61 @@
+html {
+    background-color:   mistyrose;
+    background-image: url("../img/elephants.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 h1{
     color:red;
+    text-decoration: underline;
+}
+h2{
+    color: dodgerblue;
+    text-decoration: underline;
 }
 h3{
     color: dodgerblue;
+    text-decoration: underline;
 }
 .fancy-header {
     color: purple;
+    text-align: center;
+}
+.main-header{
+    margin: 50px auto;
+    width: 500px;
+    padding: 10px;
+}
+ol li{
+    list-style: lower-roman;
+}
+ul li{
+    list-style: circle;
+}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+body{
+    font-family: "Sofia, sans-serif";
+}
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid darkorchid;
+    background-color: antiquewhite;
+}
+img{
+    border: 3px solid mistyrose;
+}
+a:link{
+    color: green;
+}
+a:visited{
+    color: orange;
+}
+
+a:hover{
+    color:pink;
+}
+footer{
+    text-decoration-color: mediumturquoise;
 }
