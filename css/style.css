@@ -32,14 +32,13 @@ html {
 
 ol, li{
     list-style: lower-roman;
-    border: 1px solid darkorchid;
     background-color: antiquewhite;
 }
 
 ul, li {
     list-style: circle;
-    border: 1px solid darkorchid;
     background-color: antiquewhite;
+    margin: 10px auto;
 
 }
 

@@ -50,9 +50,36 @@ function countEs(str)  {
 }
 }
 
-console.log(countEs("Ease")); // returns 2;
-console.log(countEs("teleconference")); // returns 5;
-console.log(countEs("TOM")); // returns 0;
-console.log(countEs(true)); // returns false;
-console.log(countEs(['e', 'E'])); // returns false;
-console.log(countEs()); // returns false;
+// console.log(countEs("Ease")); // returns 2;
+// console.log(countEs("teleconference")); // returns 5;
+// console.log(countEs("TOM")); // returns 0;
+// console.log(countEs(true)); // returns false;
+// console.log(countEs(['e', 'E'])); // returns false;
+// console.log(countEs()); // returns false;
+
+///////////////////////////03 MAY 2023//////////////////////////////////////////////
+
+// function containsE(input){
+//     let findE = 'e'
+//     if ((input = typeof input === 'string')){
+//         let lowercase = findE.toLowerCase();
+//         return lowercase.includes(findE);
+//     } else {
+//         return false;
+//     }
+// }
+function containsE(str){
+    if (typeof str !== "string"){
+        return false
+    } else {
+        return str.toLowerCase().indexOf("e") > -1;
+    }
+}
+
+
+console.log(containsE("Ease")); // returns 2;
+console.log(containsE("teleconference")); // returns 5;
+console.log(containsE("TOM")); // returns 0;
+console.log(containsE(true)); // returns false;
+console.log(containsE(['e', 'E'])); // returns false;
+console.log(containsE()); // returns false;
