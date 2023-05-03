@@ -1,4 +1,12 @@
 :root {
+    --bg-info: #CDDEFF;
+    --text-info: blue;
+    --bg-success: #CFF3DA;
+    --text-success: #006800;
+    --bg-warning: #FCFBC9;
+    --text-warning: #915616;
+    --bg-error: #FAD3D7;
+    --text-error: #560700;
     font-size: 11px;
 }
 
@@ -17,21 +25,21 @@ body, html {
 }
 
 .message-info {
-    color: blue;
-    background-color: #CDDEFF;
+    color: var(--text-info);
+    background-color: var(--bg-info);
 }
 
 .message-success {
-    color: green;
-    background-color: #CFF3DA;
+    color: var(--text-success);
+    background-color: var(--bg-success);
 }
 
 .message-warning {
-    color: #915616;
-    background-color: #FCFBC9;
+    color: var(--text-warning);
+    background-color: var(--bg-warning);
 }
 
 .message-error {
-    color: #560700;
-    background-color: #FAD3D7;
+    color: var(--text-error);
+    background-color: var(--bg-error);
 }
