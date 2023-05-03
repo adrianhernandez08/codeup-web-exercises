@@ -1,41 +1,53 @@
 html {
-    background-color:   mistyrose;
-    background-image: url("../img/fiesta.jpg");
+    background-image: url("../img/fiesta1.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-h1{
-    color:forestgreen;
+    h1 {
+    color: deeppink;
     text-decoration: underline;
-}
-h2{
-    color: dodgerblue;
+    }
+
+    h2 {
+    color: yellow;
     text-decoration: underline;
-}
-h3{
-    color: dodgerblue;
+    }
+
+    h3 {
+    color: floralwhite;
     text-decoration: underline;
-}
+    }
+
 .fancy-header {
-    color: purple;
+    color: floralwhite;
     text-align: center;
 }
-.main-header{
+
+.main-header {
     margin: 50px auto;
     width: 500px;
     padding: 10px;
 }
-ol li{
+
+ol, li{
     list-style: lower-roman;
+    border: 1px solid darkorchid;
+    background-color: antiquewhite;
 }
-ul li{
+
+ul, li {
     list-style: circle;
+    border: 1px solid darkorchid;
+    background-color: antiquewhite;
+
 }
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-body{
-    font-family: "Sofia, sans-serif";
+
+body {
+    text-decoration-color: floralwhite;
+    border: 1px solid green;
 }
+
 table, th, td {
     table-layout: fixed;
     width: 100%;
@@ -44,20 +56,24 @@ table, th, td {
     background-color: antiquewhite;
     border: 1px solid black;
 }
-img{
+
+img {
     border: 3px solid mistyrose;
 }
-a:link{
+
+a:link {
     color: green;
 }
-a:visited{
+
+a:visited {
     color: orange;
 }
 
-a:hover{
-    color:pink;
+a:hover {
+    color: pink;
 }
-footer{
+
+footer {
     text-decoration-color: mediumturquoise;
 }
-html { height: 100%; }
+
