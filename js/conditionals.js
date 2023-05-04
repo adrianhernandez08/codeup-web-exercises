@@ -44,14 +44,15 @@
 // // // - `colors`: a list of the colors of the rainbow
 // // // - `randomColor`: contains a single random color value from the list (this
 // // //                  will contain a different color every time the page loads)
-// // let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-// // let randomColor = colors[Math.floor(Math.random() * colors.length)];
+let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+let randomColor = colors[Math.floor(Math.random() * colors.length)];
+return randomColor
 // // /**
 // //  * TODO:
 // //  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
 // //  * You should see a different message every time you refresh the page
 // //  */
-// // console.log(analyzeColor(randomColor));
+        console.log(analyzeColor(randomColor));
 // /**
 //  * TODO:
 //  * Comment out the code above, and refactor your function to use a switch-case statement
