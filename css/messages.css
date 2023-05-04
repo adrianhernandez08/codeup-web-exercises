@@ -19,7 +19,7 @@ body, html {
 }
 .message {
     border: 1px solid lightgray;
-    padding: .6em;
+    padding: .5em;
     margin: 1em auto 1em auto;
     border-radius: .4em;
     width: 75vh;
