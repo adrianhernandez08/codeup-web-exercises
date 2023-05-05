@@ -90,18 +90,28 @@
 //
 //
 //
-function fizzBuzz()  {
-        for (let i = 1; i <= 100; i++) {
-    //         // if (i % 3 === 0 && i % 5 === 0) {
-    //         //     console.log("fizzBuzz");
-    //         // } else if (i % 3 === 0) {
-    //         //     console.log("fizz");
-    //         // } else if (i % 5 === 0) {
-    //         //     console.log("buzz");
-    //         // } else {
-    //         //     console.log(i);
-    //         // }
-    //     }
-    // }
+// function fizzBuzz()  {
+//         for (let i = 1; i <= 100; i++) {
+//     //         // if (i % 3 === 0 && i % 5 === 0) {
+//     //         //     console.log("fizzBuzz");
+//     //         // } else if (i % 3 === 0) {
+//     //         //     console.log("fizz");
+//     //         // } else if (i % 5 === 0) {
+//     //         //     console.log("buzz");
+//     //         // } else {
+//     //         //     console.log(i);
+//     //         // }
+//     //     }
+//     // }
+//
+// fizzBuzz();
 
-fizzBuzz();
+///////////////05 MAY 2023////////////////////////////////////
+// Warmup:
+//     Create a do-while loop that starts at 2, and displays the number squared on each line while the number is less than 1,000,000. Output should equal:
+
+let i = 2;
+        do {
+                console.log(i);
+              i = i * i;
+        } while (i < 1000000);
