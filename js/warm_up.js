@@ -113,5 +113,5 @@
 let i = 2;
         do {
                 console.log(i);
-              i = i * i;
+              i = Math.pow(i, 2) ;
         } while (i < 1000000);

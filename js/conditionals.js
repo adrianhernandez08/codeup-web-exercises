@@ -44,15 +44,38 @@
 // // // - `colors`: a list of the colors of the rainbow
 // // // - `randomColor`: contains a single random color value from the list (this
 // // //                  will contain a different color every time the page loads)
-let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-let randomColor = colors[Math.floor(Math.random() * colors.length)];
-return randomColor
+// let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+// let randomColor = colors[Math.floor(Math.random() * colors.length)];
+// return randomColor
+
+
+function ranNum (max, min){
+    return Math.floor(Math.random() * (max - min +1)) + min;
+}
+function findFactors(x) {
+    let arr = []
+    if(typeof x === "number" && !isNaN(x)) {
+        for(let i = 1; i <= x; i++){
+            if (x % i === 0) {
+                arr.push(i)
+            }
+        } console.log(arr)
+    } else {
+        return false
+    }
+}
+
+console.log(findFactors("5"));
+
+
+
+
 // // /**
 // //  * TODO:
 // //  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
 // //  * You should see a different message every time you refresh the page
 // //  */
-        console.log(analyzeColor(randomColor));
+//         console.log(analyzeColor(randomColor));
 // /**
 //  * TODO:
 //  * Comment out the code above, and refactor your function to use a switch-case statement
@@ -156,17 +179,17 @@ return randomColor
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
-let userNumber = confirm("Would you like to enter a number?");
-
-    if (userNumber === true) {
-        prompt("What number would you like to enter?");
-    } else if (userNumber === false) {
-        prompt("You must enter a number");
-    } else if (userNumber === (userNumber % 2 === 0)) {
-    alert("Your entered number is even");
-    } else if (userNumber !== (userNumber % 2 === 0)) {
-    alert("Your entered number is odd");
-}else{
-        prompt("You need to enter a number.")
-
-    }
+// let userNumber = confirm("Would you like to enter a number?");
+//
+//     if (userNumber === true) {
+//         prompt("What number would you like to enter?");
+//     } else if (userNumber === false) {
+//         prompt("You must enter a number");
+//     } else if (userNumber === (userNumber % 2 === 0)) {
+//     alert("Your entered number is even");
+//     } else if (userNumber !== (userNumber % 2 === 0)) {
+//     alert("Your entered number is odd");
+// }else{
+//         prompt("You need to enter a number.")
+//
+//     }
