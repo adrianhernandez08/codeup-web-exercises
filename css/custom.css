@@ -1,9 +1,69 @@
-
-
-#jumbo-container {
-    background-image: url("../img/pizza.png");
-}
 h1 {
-    background-color: lightgrey;
-    opacity: 50%;
+    text-align: center;
+    background: #E6ECF0;
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    opacity: 0.5;
+}
+section {
+    margin: 10px;
+}
+a:link {
+    color: lightskyblue;
+}
+#exampleFormControlSelect1 {
+    width: 97%;
+}
+.w1 {
+    width: 100%;
+}
+.jumbotron {
+    background-image: url("../img/pizza.png");
+    margin: 0;
+}
+.form-group {
+    margin: 15px;
+}
+.form-list {
+    width: 97%;
+}
+.card {
+    width: 100%;
+}
+.card-header{
+    background: lightgray;
+}
+.card-margin {
+    margin: 5px;
+}
+.list-group-item-info {
+    background: #ffffff;
+    color: black;
+}
+.float-right {
+    float: right;
+}
+.margin-top {
+    margin: 10px 0;
+}
+.checkout::after {
+    content: "";
+}
+.card-grey {
+    background-color: #ebf0f4;
+}
+.logo-size {
+    width: 1em;
+    height: 1em;
+    float:right;
+}
+.image-size {
+    height: 20px;
+    width: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .jumbotron, .form-group, .card, .card-margin, .margin-top, .card-grey {
+        width: 100%;
+    }
 }
