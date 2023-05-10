@@ -3,13 +3,13 @@
 // //Write a function named remainder that will accept two arguments and return the remainder of a division between the two values (the first divided by the second). If either argument is not a number, the function should return false .
 // //Consider the following test cases:
 
-// function remainder(a, b) {
-// if ( typeof a === "number" && typeof b === "number") {
-//     return a % b;
-// }else{
-//     return  false;
-// }
-// }
+function remainder(a, b) {
+if ( typeof a === "number" && typeof b === "number") {
+    return a % b;
+}else{
+    return  false;
+}
+}
 //
 // console.log(remainder(21, 7)); // returns 0
 // console.log(remainder(-34, 3)); // returns -1
