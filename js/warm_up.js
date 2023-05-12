@@ -186,7 +186,7 @@ const hamsters = [
 
 function extractNames(arr) {
 let bucket = [];
-    arr.forEach(function(el)) {
+    arr.forEach(function(el); {
     bucket.push(el.name)
     });
 }
