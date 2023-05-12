@@ -84,53 +84,112 @@
 // console.log(containsE(['e', 'E'])); // returns false;
 // console.log(containsE()); // returns false;
 
-///////////////04 MAY 2023////////////////////////////////////
-// Dragon Warmup:
-//     Write a function named fizzBuzz that prints to the console the number 1 - 100. If the number is divisible by 3 print fizz instead of the number. If the number is divisible by 5 print buzz. If the number is divisible by both 3 and 5 print fizzBuzz.
+// ///////////////04 MAY 2023////////////////////////////////////
+// // Dragon Warmup:
+// //     Write a function named fizzBuzz that prints to the console the number 1 - 100. If the number is divisible by 3 print fizz instead of the number. If the number is divisible by 5 print buzz. If the number is divisible by both 3 and 5 print fizzBuzz.
+// //
+// //
+// //
+// // function fizzBuzz()  {
+// //         for (let i = 1; i <= 100; i++) {
+// //     //         // if (i % 3 === 0 && i % 5 === 0) {
+// //     //         //     console.log("fizzBuzz");
+// //     //         // } else if (i % 3 === 0) {
+// //     //         //     console.log("fizz");
+// //     //         // } else if (i % 5 === 0) {
+// //     //         //     console.log("buzz");
+// //     //         // } else {
+// //     //         //     console.log(i);
+// //     //         // }
+// //     //     }
+// //     // }
+// //
+// // fizzBuzz();
+//
+// ///////////////05 MAY 2023////////////////////////////////////
+// // Warmup:
+// //     Create a do-while loop that starts at 2, and displays the number squared on each line while the number is less than 1,000,000. Output should equal:
+//
+// // let i = 2;
+// //         do {
+// //                 console.log(i);
+// //               i = Math.pow(i, 2) ;
+// //         } while (i < 1000000);
 //
 //
 //
-// function fizzBuzz()  {
-//         for (let i = 1; i <= 100; i++) {
-//     //         // if (i % 3 === 0 && i % 5 === 0) {
-//     //         //     console.log("fizzBuzz");
-//     //         // } else if (i % 3 === 0) {
-//     //         //     console.log("fizz");
-//     //         // } else if (i % 5 === 0) {
-//     //         //     console.log("buzz");
-//     //         // } else {
-//     //         //     console.log(i);
-//     //         // }
-//     //     }
-//     // }
+// // Write a function that takes in an array of numbers and returns all of the numbers added together (We'll be assuming that only arrays are going to be used with this function).
 //
-// fizzBuzz();
+// function addEmUp(arr) {
+//     let sum = 0
+//     arr.forEach(function(num) {
+//         sum += num
+//     });
+//     return sum;
+// }
+//
+// console.log(addEmUp([2,6,19])); // returns 27
+// console.log(addEmUp([-99, 180, -5])); // returns 76
+// console.log(addEmUp([44,10,7])); // returns 61
+// console.log(addEmUp([-100])); // returns -100
+// console.log(addEmUp([1,2,3,4,5,6,7,8,9,10])); // returns 55
+// console.log(addEmUp([-13, -92, -3500])) // returns -3605
 
-///////////////05 MAY 2023////////////////////////////////////
-// Warmup:
-//     Create a do-while loop that starts at 2, and displays the number squared on each line while the number is less than 1,000,000. Output should equal:
+// Write a function that takes in a string and returns an object describing the string. The object should have a string property that contains the original string, a numberOfEs property that contains a count of the number of e's in the string (case-insensitive), and a isEvenLength property that contains a boolean for whether the string's length is even or not.
 
-// let i = 2;
-//         do {
-//                 console.log(i);
-//               i = Math.pow(i, 2) ;
-//         } while (i < 1000000);
+// function explainString(str) {
+// return {
+//     string: str,
+//     numberOfEs: countEs(str),
+//     isEvenLength: str.length % 2 === 0
+// }
+// }
+//
+// console.log(explainString("cheese")) // returns {string: "cheese", numberOfEs: 3, isEvenLength: true};
+// console.log(explainString("dog")) // returns {string: "dog", numberOfEs: 0, isEvenLength: false};
 
+// Write a function that takes in an array of objects and returns an array containing all of the names from the original array.
 
+const hamsters = [
+    {
+        name: "Hamtaro",
+        heightInMM: 86,
+        fur: ['orange', 'white'],
+        gender: "male",
+        dateOfBirth: "August 6"
+    } , {
+        name: "Bijou",
+        heightInMM: 75,
+        fur: ['white'],
+        gender: "female",
+        dateOfBirth: "July 10"
+    } , {
+        name: "Oxnard",
+        heightInMM: 100,
+        fur: ['grey', 'white'],
+        gender: "male",
+        dateOfBirth: "May 3"
+    } , {
+        name: "Boss",
+        heightInMM: 120,
+        fur: ['brown', 'white'],
+        gender: "male",
+        dateOfBirth: "September 21"
+    } , {
+        name: "Snoozer",
+        heightInMM: 85,
+        fur: ['brown', 'white', "pink"],
+        gender: "male",
+        dateOfBirth: "January 14"
+    }
+];
 
-// Write a function that takes in an array of numbers and returns all of the numbers added together (We'll be assuming that only arrays are going to be used with this function).
-
-function addEmUp(arr) {
-    let sum = 0
-    arr.forEach(function(num) {
-        sum += num
+function extractNames(arr) {
+let bucket = [];
+    arr.forEach(function(el)) {
+    bucket.push(el.name)
     });
-    return sum;
 }
+return bucket
 
-console.log(addEmUp([2,6,19])); // returns 27
-console.log(addEmUp([-99, 180, -5])); // returns 76
-console.log(addEmUp([44,10,7])); // returns 61
-console.log(addEmUp([-100])); // returns -100
-console.log(addEmUp([1,2,3,4,5,6,7,8,9,10])); // returns 55
-console.log(addEmUp([-13, -92, -3500])) // returns -3605
+console.log(extractNames(hamsters)); // returns ["Hamtaro", "Bijou", "Oxnard", "Boss", "Snoozer"];
