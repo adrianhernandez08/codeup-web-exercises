@@ -184,12 +184,24 @@ const hamsters = [
     }
 ];
 
-function extractNames(arr) {
-let bucket = [];
-    arr.forEach(function(el); {
-    bucket.push(el.name)
-    });
-}
-return bucket
+// function extractNames(arr) {
+// let bucket = [];
+//     arr.forEach(function(el) {
+//     bucket.push(el.name)
+//     });
+// }
+// return bucket
+//
+// console.log(extractNames(hamsters)); // returns ["Hamtaro", "Bijou", "Oxnard", "Boss", "Snoozer"];
 
-console.log(extractNames(hamsters)); // returns ["Hamtaro", "Bijou", "Oxnard", "Boss", "Snoozer"];
+
+
+const getTallest = function(arr){
+    let tallest = {heightInMM: 0};
+    arr.forEach(function(obj){
+        if(obj.heightInMM > tallest.heightInMM){
+            tallest = obj;
+        }
+    })
+    return tallest;
+}
