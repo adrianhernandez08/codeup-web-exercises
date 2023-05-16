@@ -196,12 +196,38 @@ const hamsters = [
 
 
 
-const getTallest = function(arr){
-    let tallest = {heightInMM: 0};
+// const getTallest = function(arr){
+//     let tallest = {heightInMM: 0};
+//     arr.forEach(function(obj){
+//         if(obj.heightInMM > tallest.heightInMM){
+//             tallest = obj;
+//         }
+//     })
+//     return tallest;
+// }
+
+// Write a function that takes in an array of objects and returns an array of the objects from the array that only have one fur color.
+
+function singleFurColor(arr) {
+    let singleFur= [];
     arr.forEach(function(obj){
-        if(obj.heightInMM > tallest.heightInMM){
-            tallest = obj;
+        if(obj.fur.length === 1){
+            singleFur.push(obj);
         }
     })
-    return tallest;
+    return singleFur;
 }
+
+console.log(singleFurColor(hamsters));
+
+function singleFurColor(arr) {
+    let singleFur= [];
+        for(let i = 0; i < arr.length; i++){
+            if(arr[i].fur.length === 1){
+                singleFur.push(arr[1]);
+            }
+        }
+    return singleFur;
+}
+
+console.log(singleFurColor(hamsters));
