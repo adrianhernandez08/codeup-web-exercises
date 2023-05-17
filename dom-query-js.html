@@ -28,40 +28,34 @@
     (function() {
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
-        var mainHeader = getElementById("mainHeader");
+        const mainHeader = document.getElementById("main-header");
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-document.getElementById("mainHeader").innerText = "JavaScript is Cool";
+mainHeader.innerText = "JavaScript is Cool";
         // TODO: Uncomment the next line and get the sub header element by id
-        var subHeader = getElementById("subHeader");
+        var subHeader = document.getElementById("sub-header");
 
         // TODO: Set the text color of subHeader to blue
-        document.getElementById("subHeader").style.color = "blue";
+subHeader.style.color = "blue";
         // TODO: Uncomment the next line and get all list items
-        var listItems = getElementByClassName("listItems");
+        var listItems = document.getElementsByTagName("li");
 
         // TODO: Set text color on every other list item to grey
-        for (let i = 0; i < listItems.length; i++) {
-            if (i % 2 === 0) {
-                listItems[i].style = "text-color: gray"; // this will work!
-            }
+        for (let i = 0; i < listItems.length; i+=2){
+            listItems[i].style.color = "grey";
         }
         // TODO: Set text color of li with dbid = 1 to blue
-        for (let i = 0; i < li.length; i++) {
-            if (i === 1) {
-                liItems[i].style = "text-color: blue";
+        for (let i = 0; i < listItems.length; i++) {
+            if (listItems[i].getAttribute("data-dbid") === "1"){
+                listItems[i].style.color = "blue";
             }
         }
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        var subParagraphs = getElementByClassName("sub-paragraph");
+        var subParagraphs = document.getElementsByClassName("sub-paragraph");
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        for (let i = 0; i < subParagraphs.length; i++) {
-            if (i === 0) {
-                document.getElementById("mainHeader").innerText = "Mission Accomplished!";
-            }
-        }
+      subParagraphs[0].innerText = "Mission Accomplished"
     })();
 </script>
 </body>
