@@ -9,19 +9,19 @@
 // Write a function that takes in a number and returns an array of numbers that are divisible within the argument. If the value provided is not a number, the function should return false.
 
 //01 MAY 2023......
-// function findFactors(num) {
-//     if (typeof num === "number" && !isNaN(num)) {
-//         let bucket = [];
-//         for (let i = 1; i <= num; i++ ){
-//             if(num % i === 0){
-//                 bucket.push(i);
-//             }
-//         }
-//         return bucket;
-//     } else {
-//         return false
-//     }
-// }
+function findFactors(num) {
+    if (typeof num === "number" && !isNaN(num)) {
+        let bucket = [];
+        for (let i = 1; i <= num; i++ ){
+            if(num % i === 0){
+                bucket.push(i);
+            }
+        }
+        return bucket;
+    } else {
+        return false
+    }
+}
 //
 // console.log(findFactors(6)); // returns [1,2,3,6];
 // console.log(findFactors(16)); // returns [1,2,4,8,16];
@@ -224,11 +224,28 @@ const hamsters = [
 
 // Write a function that takes in an array of objects and returns the object with the most colors in the fur array.
 
-function mostColorful(arr) {
-    let mostColor = {fur:[]};
-    arr.forEach(function(obj)){
-        if (obj.fur.length);
-        }
+// function mostColorful(arr) {
+//     let mostColor = {fur:[]};
+//     arr.forEach(function(obj)){
+//         if (obj.fur.length);
+//         }
+//
+//     console.log(mostColorful(hamsters)); // returns {name: "Snoozer", heightInMM: 85, fur: ['brown', 'white', "pink"], gender: "male", dateOfBirth: "January 14"};
+// }
 
-    console.log(mostColorful(hamsters)); // returns {name: "Snoozer", heightInMM: 85, fur: ['brown', 'white', "pink"], gender: "male", dateOfBirth: "January 14"};
+// Write a JavaScript function that takes in a number and returns an object with the following fields: number, which will contain the original number; evenOrOdd, which will contain a string ("even" or "odd") as to whether the value is even or odd; factors, an array of numbers that are evenly divisible within the number passed; and numberOfDigits, a number counting the number of digits with the number passed.
+
+function describeNumber(num) {
+    return {
+        number: num,
+        evenOrOdd: (num % 2 === 0) ? "even" : "odd",
+        factors: findFactors(num),
+        numberOfDigits: (`${num}`).length
+
+    }
+
+
 }
+
+console.log(describeNumber(19)); // returns {number: 19, evenOrOdd: "odd", factors: [1,19], numberOfDigits: 2};
+console.log(describeNumber(2)); // returns {number: 2, evenOrOdd: "even", factors: [1,2], numberOfDigits: 1};
