@@ -10,7 +10,30 @@
 
 </head>
 <body>
+<button class="styler" id="btn-1">Click for Change!</button>
+
 <h1>FAQ about National Parks</h1>
+<div class="wrapper">
+<div class="design-card">
+<div class="col">
+    <h5>Match the Jungle</h5>
+    <div class="row">
+        <img src="img/encanto.jpeg" class="card-img center-around-evenly" alt="...">
+        <div class="picture-container d-flex">
+            <h5>Avatar</h5>
+        </div>
+        <img src="img/kingkong.jpeg" class="card-img" alt="...">
+        <div class="picture-container d-flex">
+            <h5>King Kong</h5>
+        </div>
+        <img src="img/avatar.jpeg" class="card-img" alt="...">
+        <div class="picture-container d-flex">
+            <h5>Encanto</h5>
+        </div>
+    </div>
+</div>
+</div>
+</div>
   <dl>
       <dt>How many employees are in the National Park Service?</dt>
         <dd>Approximately 20,000</dd>
@@ -34,22 +57,33 @@
         <dd>Wind Cave National Park, South Dakota</dd>
   </dl>
 
+
+
+<button class="yellow" type="submit">Yellow</button>
+
 <style>
+
     .invisibility {
         visibility: hidden;
     }
     .visibility{
       visibility: visible;
     }
-    body {
-      box-sizing: border-box;
-      margin: 2em;
-    }
+
+
+
 </style>
 <script>
-    "use strict";
-    $("dd").addClass("invisibility");
-    $("dd").toggle("visibility");
+    $(document).ready(function() {
+        $("#btn-1").on("click", function() {
+            $("dd").toggleClass("invisible");
+        });
+
+        $("dt").on("click", function() {
+            $(this).addClass("highlighter");
+        })
+    });
+
 
 </script>
 </body>
