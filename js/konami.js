@@ -10,15 +10,10 @@ var allowedKeys = {
     66: 'b',
     13: 'return'
 };
-
-
-
 // Konami Code sequence//
 var konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a', 'return'];
-
 // position reached so far//
 var konamiCodePosition = 0;
-
 // keydown event listener //
 document.addEventListener('keydown', function(e) {
     // value of the key code from key map
@@ -27,13 +22,10 @@ document.addEventListener('keydown', function(e) {
     var requiredKey = konamiCode[konamiCodePosition];
     window.clearTimeout(timerID);
     var timerID = window.setTimeout(resetKeyState, 1000);
-
     // compare the key with the required key
     if (key == requiredKey) {
-
         // move to the next key in the konami code sequence
         konamiCodePosition++;
-
         // if the last key is reached, activate cheats
         if (konamiCodePosition == konamiCode.length) {
             activateCheats();
@@ -49,7 +41,6 @@ document.addEventListener('keydown', function(e) {
     }
     });
 // code activated//
-
 function activateCheats() {
     $("#header-img").addClass("d-none");
     $("#enterCode").addClass("d-none");
