@@ -1,15 +1,29 @@
 * {
     box-sizing: border-box;
+
 }
 body, html {
     height: 100%;
-    font-family: "Inconsolata", sans-serif;
     margin: 2em;
+    background-image: url("/img/balloons.gif");
+
 }
 
-.bgimg {
+#invite{
     background-position: center;
     background-size: contain;
-    background-image: url("img/invite.jpeg");
+    background-image: url("/img/invite.jpeg");
     min-height: 50%;
+    border-style: solid;
+}
+.header{
+    border-style: solid;
+
+}
+
+.h1 {
+    margin: auto;
+    width: 50%;
+    border: 8px solid green;
+    padding: 3em;
 }

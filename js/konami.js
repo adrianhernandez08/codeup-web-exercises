@@ -8,21 +8,25 @@ var allowedKeys = {
     40: 'down',
     65: 'a',
     66: 'b',
-    13: 'enter'
+    13: 'return'
 };
 
-// the 'official' Konami Code sequence
-var konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a', 'enter'];
 
-// a variable to remember the 'position' the user has reached so far.
+
+// Konami Code sequence//
+var konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a', 'return'];
+
+// position reached so far//
 var konamiCodePosition = 0;
 
-// add keydown event listener
+// keydown event listener //
 document.addEventListener('keydown', function(e) {
-    // get the value of the key code from the key map
+    // value of the key code from key map
     var key = allowedKeys[e.keyCode];
-    // get the value of the required key from the konami code
+    // value of the required key from konami code //
     var requiredKey = konamiCode[konamiCodePosition];
+    window.clearTimeout(timerID);
+    var timerID = window.setTimeout(resetKeyState, 1000);
 
     // compare the key with the required key
     if (key == requiredKey) {
@@ -36,18 +40,18 @@ document.addEventListener('keydown', function(e) {
             konamiCodePosition = 0;
         }
     } else {
-        konamiCodePosition = 0;
+        resetKeyState();
     }
-});
-
+    function resetKeyState(){
+        console.log("resetting keys");
+        keyCount = 0;
+        window.clearTimeout(timerID)
+    }
+    });
+// code activated//
 function activateCheats() {
-    document.body.style.backgroundImage = "url('img/background_to_party.gif')";
+    document.body.style.backgroundImage = "url(img/background_to_party.gif)";
+    alert("WELCOME TO THE PARTY");
     var audio = new Audio('img/party.mp3');
     audio.play();
-    $('h1').on(
-        function() {
-            $(this).css('font-size', '100px');
-        },
-    );
-    alert("NOW THE PARTY CAN BEGIN!!!!");
 }
