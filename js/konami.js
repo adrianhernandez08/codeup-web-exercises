@@ -49,9 +49,15 @@ document.addEventListener('keydown', function(e) {
     }
     });
 // code activated//
+
 function activateCheats() {
+    $("#header-img").addClass("d-none");
+    $("#enterCode").addClass("d-none");
+    $('#header-img').replaceWith("<p><a href=\"#\" class=\"text-light bg-dark text-justify\"><h1>WELCOME TO THE PARTY!!!!!</h1></a></p>\n");
+
     document.body.style.backgroundImage = "url(img/background_to_party.gif)";
     alert("WELCOME TO THE PARTY");
     var audio = new Audio('img/party.mp3');
     audio.play();
+
 }
