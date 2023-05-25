@@ -10,30 +10,37 @@
 
 </head>
 <body>
-<button class="styler" id="btn-1">Click for Change!</button>
-
 <h1>FAQ about National Parks</h1>
-<div class="wrapper">
-<div class="design-card">
-<div class="col">
+
     <h5>Match the Jungle</h5>
     <div class="row">
-        <img src="img/encanto.jpeg" class="card-img center-around-evenly" alt="...">
-        <div class="picture-container d-flex">
-            <h5>Avatar</h5>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="img/encanto.jpeg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Encanto</h5>
+                <p class="card-text"></p>
+                <a href="#" id="btn1" class="btn btn-primary">switch right</a>
+            </div>
         </div>
-        <img src="img/kingkong.jpeg" class="card-img" alt="...">
-        <div class="picture-container d-flex">
-            <h5>King Kong</h5>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="img/kingkong.jpeg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Avatar</h5>
+                <p class="card-text"></p>
+                <a href="#" id="btn2" class="btn btn-primary">random switch</a>
+            </div>
         </div>
-        <img src="img/avatar.jpeg" class="card-img" alt="...">
-        <div class="picture-container d-flex">
-            <h5>Encanto</h5>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="img/avatar.jpeg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">King Kong</h5>
+                <p class="card-text"></p>
+                <a href="#" id="btn3" class="btn btn-primary">switch left</a>
+            </div>
         </div>
     </div>
-</div>
-</div>
-</div>
+<button class="styler" id="btn-1">Click for Change!</button>
+
   <dl>
       <dt>How many employees are in the National Park Service?</dt>
         <dd>Approximately 20,000</dd>
@@ -59,7 +66,7 @@
 
 
 
-<button class="yellow" type="submit">Yellow</button>
+<button class="orange" type="submit">Highlight Orange</button>
 
 <style>
 
@@ -69,8 +76,14 @@
     .visibility{
       visibility: visible;
     }
-
-
+    .highlighter {
+        background-color: #e6563b;
+        color: white;
+        font-family: 'IBM Plex Mono', monospace;
+    }
+    body, html{
+        margin: 2em;
+    }
 
 </style>
 <script>
@@ -79,8 +92,8 @@
             $("dd").toggleClass("invisible");
         });
 
-        $("dt").on("click", function() {
-            $(this).addClass("highlighter");
+        $(".orange").on("click", function() {
+            $("dd").toggleClass("highlighter");
         })
     });
 
