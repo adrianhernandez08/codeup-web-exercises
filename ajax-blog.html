@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BLOG</title>
+</head>
+<body>
+
+
+<h1>MY FIRST BLOG</h1>
+<button id="load-btn">Refresh</button>
+
+<table id="posts">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Content</th>
+        <th>Categories</th>
+        <th>Date</th>
+    </tr>
+    </thead>
+    <tbody id="insertblog"></tbody>
+</table>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+
+<script>
+    (function() {
+        "use strict";
+        $.get('data/blog.json').done(function(data) {
+            console.log(data);
+        });
+        var html;
+        var url = "data/blog.json";
+
+        loadTable();
+
+        function loadTable(){
+            $.get(url).done(function(inventory){
+                html = "";
+                inventory.forEach(function(tool){
+                    html += "<tr>\n" +
+                        "    <td>"+tool.title+"</td>\n" +
+                        "    <td>"+tool.content+"</td>\n" +
+                        "    <td>"+tool.categories+"</td>\n" +
+                        "    <td>"+tool.date+"</td>\n" +
+                        "</tr>";
+                });
+
+                $("#insertblog").empty().html(html);
+
+            });
+        }
+
+        $("#load-btn").click(loadTable);
+    })();
+
+</script>
+
+</body>
+</html>
