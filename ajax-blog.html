@@ -36,14 +36,14 @@
         loadTable();
 
         function loadTable(){
-            $.get(url).done(function(inventory){
+            $.get(url).done(function(blog){
                 html = "";
-                inventory.forEach(function(tool){
+                blog.forEach(function(blog){
                     html += "<tr>\n" +
-                        "    <td>"+tool.title+"</td>\n" +
-                        "    <td>"+tool.content+"</td>\n" +
-                        "    <td>"+tool.categories+"</td>\n" +
-                        "    <td>"+tool.date+"</td>\n" +
+                        "    <td>"+blog.title+"</td>\n" +
+                        "    <td>"+blog.content+"</td>\n" +
+                        "    <td>"+blog.categories+"</td>\n" +
+                        "    <td>"+blog.date+"</td>\n" +
                         "</tr>";
                 });
 

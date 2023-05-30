@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>First Mapbox Map</title>
+  <!-- Mapbox JS -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
+  <!-- Mapbox CSS -->
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />    <style>
+  #map {
+    width: 100%;
+    height: 700px;
+  }
+</style>
+</head>
+<body>
+<h1>My First Mapbox Map!</h1>
+<!-- The HTML element that serves as the Mapbox container -->
+  <div id='map'></div>
+  <script src ="js/keys.js"></script>
+  <script src ="js/mapbox-geocoder-utils.js"></script>
+  <script>
+    mapboxgl.accessToken = myMapBox;
+    var map = new mapboxgl.Map({
+    container: 'map', // container ID
+    style: 'mapbox://styles/mapbox/streets-v11', // style URL
+    zoom: 5, // starting zoom
+    center: [-83.926096, 34.021844] // [lng, lat]
+    });
+// The Iberian Pig//
+    var marker = new mapboxgl.Marker()
+          .setLngLat([-83.926096, 34.021844])
+          .addTo(map);
+    var popup = new mapboxgl.Popup()
+          .setLngLat([-83.926096, 34.021844])
+          .setHTML("<p>The Iberian Pig</p>")
+          .addTo(map)
+// Whiskey Cake Kitchen & Bar//
+    var marker = new mapboxgl.Marker()
+          .setLngLat([-98.6143878, 29.5932689])
+          .addTo(map);
+    var popup = new mapboxgl.Popup()
+          .setLngLat([-98.6143878, 29.5932689])
+          .setHTML("<p>Whiskey Cake Kitchen & Bar</p>")
+          .addTo(map)
+// Johnny's Po-Boys//
+    var marker = new mapboxgl.Marker()
+          .setLngLat([-90.064527, 29.955523])
+          .addTo(map);
+
+    var popup = new mapboxgl.Popup()
+          .setLngLat([-90.064527, 29.955523])
+          .setHTML("<p>Johnny's Po-Boys</p>")
+          .addTo(map)
+
+  </script>
+</body>
+</html>
