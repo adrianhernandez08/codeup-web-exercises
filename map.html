@@ -29,8 +29,9 @@
     style: 'mapbox://styles/mapbox/streets-v11', // style URL
     zoom: 4, // starting zoom
     center: [-90.064527, 29.955523] // [lng, lat]
-    });
- // The Iberian Pig//
+    })
+
+// // The Iberian Pig//
      var marker = new mapboxgl.Marker()
            .setLngLat([-83.926096, 34.021844])
            .addTo(map);
@@ -54,47 +55,7 @@
            .setLngLat([-90.064527, 29.955523])
            .setHTML("<p>Johnny's Po-Boys</p>")
           .addTo(map)
-//     var restaurants = [
-//       {
-//         name: "The Iberian Pig",
-//         location: "121 Sycamore St, Decautur, GA 30030",
-//         popupHTML: "<a href=\https://www.iberianpig.com//menu.html\"><b>Website</b></a>"
-//       },
-//       {
-//         name: "Whiskey Cake Kitchen & Bar",
-//         location: "15900 La Cantera Pkwy Suite 21200, San Antonio, TX 78256",
-//         popupHTML: "<a href=\https://whiskeycake.com//menu.html\"><b>Website</b></a>"
-//       },
-//       {
-//         name: "Johnny's Po-Boys",
-//         location: "511 St Louis St, New Orleans, LA 70130",
-//         popupHTML: "<a href=\https://www.neworleans.com/listing/johnnys-po-boys/11012\"><b>Website</b></a>"
-//       }
-//     ];
-//     function restaurantMarkerAndPopup(restaurant, myMapBox, map) {
-//       restaurants.forEach(function (restaurant) {
-//         geocode(restaurant.location, myMapBox).then(function (result) {
-//           var restaurantPopUp = new mapboxgl.Popup({closeOnClick: true})
-//                   .setHTML("<b>" + restaurant.name + "</b>" + "<br>" + restaurant.popupHTML );
-//           var restaurantMarker = new mapboxgl.Marker(markerOptions)
-//                   .setLngLat(result)
-//                   .addTo(map)
-//                   .setPopup(restaurantPopUp);
-//           restaurantMarker;
-//         });
-//       });
-//
-//     }
-//
-//     restaurantMarkerAndPopup(restaurants, mapboxToken, map)
-//     setTimeout(function(){
-//       var map = new mapboxgl.Map({
-//         container: 'map',
-//         style: 'mapbox://styles/mapbox/streets-v11',
-//         zoom: 5,
-//         center: [-90.064527, 29.955523]
-//       });
-//     },5000)
+
 
     map.addControl(new mapboxgl.NavigationControl());
     var markerOptions = {

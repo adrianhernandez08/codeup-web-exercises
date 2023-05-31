@@ -1,7 +1,7 @@
 
 
 
-myMapBox =  "pk.eyJ1IjoiYWRyaWFuaGR6OTAiLCJhIjoiY2xpYWV3ZjFpMDJpNjNkcGZ2bXJlamJmMiJ9.WBrYXFb5bEcN8Cw8d7segg"
+const myMapBox =  "pk.eyJ1IjoiYWRyaWFuaGR6OTAiLCJhIjoiY2xpYWV3ZjFpMDJpNjNkcGZ2bXJlamJmMiJ9.WBrYXFb5bEcN8Cw8d7segg"
 
 
 /***
