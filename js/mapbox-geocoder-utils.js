@@ -1,4 +1,8 @@
-"use strict";
+
+
+
+myMapBox =  "pk.eyJ1IjoiYWRyaWFuaGR6OTAiLCJhIjoiY2xpYWV3ZjFpMDJpNjNkcGZ2bXJlamJmMiJ9.WBrYXFb5bEcN8Cw8d7segg"
+
 
 /***
  * geocode is a method to search for coordinates based on a physical address and return
