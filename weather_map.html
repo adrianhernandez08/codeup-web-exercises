@@ -17,32 +17,14 @@
   </style>
 </head>
 <body>
+
 <div id="weather-info"></div>
+
 <div id='map'></div>
 <script src ="js/keys.js"></script>
 <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 
 <script>
-<!--map -->
-  mapboxgl.accessToken = myMapBox;
-  var map = new mapboxgl.Map({
-    container: 'map', // container ID
-    style: 'mapbox://styles/mapbox/streets-v11', // style URL
-    zoom: 4, // starting zoom
-    center: [-97.8561, 27.5159] // [lng, lat]
-  });
-<!-- zoom in button thing -->
-map.addControl(new mapboxgl.NavigationControl());
-var markerOptions = {
-  color: "darkred",
-  draggable: false
-};
-
-var marker = new mapboxgl.Marker()
-        .setLngLat([-97.8561, 27.5159])
-        .addTo(map);
-
-
   let latLong = [29.7604, -95.3698];
   $.get(`https://api.openweathermap.org/data/2.5/forecast?lat=${latLong[0]}&lon=${latLong[1]}&units=imperial&appid=${openWeather}`).done(function(data) {
     console.log(data);
@@ -123,9 +105,41 @@ var marker = new mapboxgl.Marker()
 
     $("#weather-info").html(weatherHTML);
   });
-          </script>
+</script>
 
+<pre id="coordinates" class="coordinates"></pre>
 
+<script>
+
+  $(function(){
+    mapboxgl.accessToken = myMapBox;
+  const coordinates = document.getElementById('coordinates');
+  const map = new mapboxgl.Map({
+    container: 'map',
+// Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+    style: 'mapbox://styles/mapbox/streets-v12',
+    center: [-97.8561, 27.5159],
+    zoom: 2
+  });
+
+  const marker = new mapboxgl.Marker({
+    draggable: true
+  })
+          .setLngLat([-97.8561, 27.5159])
+          .addTo(map);
+
+  function onDragEnd() {
+    const lngLat = marker.getLngLat();
+    coordinates.style.display = 'block';
+    let newCoordinates = (lngLat.lat, lngLat.lng)
+    coordinates.innerHTML = `Longitude: ${lngLat.lng}<br />Latitude: ${lngLat.lat}`;
+  }
+
+  marker.on('dragend', onDragEnd);
+
+  });
+
+</script>
 
 </body>
 </html>
