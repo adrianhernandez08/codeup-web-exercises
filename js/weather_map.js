@@ -1,5 +1,5 @@
 function getInfo(){
-    const newName= document.getElementById("cityInput");
+    let newName= document.getElementById("cityInput");
     const cityName=document.getElementById("cityName");
     cityName.innerHTML="--"+newName.value+"--"
 
@@ -87,3 +87,33 @@ function reverseGeocode(coordinates) {
         });
 }
 // console.log(reverseGeocode());
+
+// function updatedInfo() {
+//
+//     fetch("http://api.openweathermap.org/data/2.5/forecast?q=" + onDragEnd.value + '&appid=f94de48a8d3f08bfb3da0b67ab2ed431&units=imperial')
+//         .then(response => response.json())
+//         .then(data => {
+//             console.log(data);
+//         })
+//         .catch(err => console.warn(err.message));
+//
+//     for(i=0; i<5; i++){
+//         document.getElementById("cityName" + (i+1) + "cityName").innerHTML = "Max:" + Number(features.query[0, 1]) +"°"
+//     }
+//
+// }
+//
+// console.log(updatedInfo());
+//
+// for(i=0; i<5; i++) {
+//     document.getElementById("place")+(i+1)).innerHTML
+// }
+
+// function setWeatherData(lng,lat) {
+//     $.get('https://api.openweathermap.org/data/2.5/onecall', {
+//         lat: marker.getLngLat().lat,
+//         lon: marker.getLngLat().lng,
+//         appid: WEATHER_MAP_TOKEN,
+//         units: "imperial",
+//         exclude: 'minutely,hourly,current,alerts'  //used to exclude certain timeframes
+//     })
