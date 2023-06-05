@@ -3,29 +3,26 @@ function getInfo(){
     const cityName=document.getElementById("cityName");
     cityName.innerHTML="--"+newName.value+"--"
 
-            fetch("http://api.openweathermap.org/data/2.5/forecast?q="+ newName.value +'&appid=f94de48a8d3f08bfb3da0b67ab2ed431&units=imperial')
-            .then(response => response.json())
-                .then(data =>{
-                    console.log(data);
-                    for(i=0; i<5; i++){
-                        document.getElementById("day" + (i+1) + "Min").innerHTML = "Min:" + Number(data.list[i].main.temp_min).toFixed(1)+"°"
-                    }
-                    for(i=0; i<5; i++){
-                        document.getElementById("day" + (i+1) + "Max").innerHTML = "Max:" + Number(data.list[i].main.temp_max).toFixed(1)+"°"
-                    }
-                    for(i=0; i<5; i++){
-                        document.getElementById("img" + (i+1)).src="https://openweathermap.org/img/wn/" + data.list[i].weather[0].icon + ".png"
-                    }
-                })
-
-            .catch(err => alert("SOMETHING IS WRONG"))
+    fetch("http://api.openweathermap.org/data/2.5/forecast?q="+ newName.value +'&appid=f94de48a8d3f08bfb3da0b67ab2ed431&units=imperial')
+        .then(response => response.json())
+        .then(data =>{
+            console.log(data);
+            for(i=0; i<5; i++){
+                document.getElementById("day" + (i+1) + "Min").innerHTML = "Min:" + Number(data.list[i].main.temp_min).toFixed(1)+"°"
+            }
+            for(i=0; i<5; i++){
+                document.getElementById("day" + (i+1) + "Max").innerHTML = "Max:" + Number(data.list[i].main.temp_max).toFixed(1)+"°"
+            }
+            for(i=0; i<5; i++){
+                document.getElementById("img" + (i+1)).src="https://openweathermap.org/img/wn/" + data.list[i].weather[0].icon + ".png"
+            }
+        })
+        .catch(err => alert("SOMETHING IS WRONG"))
 }
-
 function defaultScreen(){
     document.getElementById("cityInput").defaultValue="Kingsville";
     getInfo();
 }
-
 const d =new Date();
 const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 function CheckDay(day){
@@ -36,13 +33,10 @@ function CheckDay(day){
         return d.getDay();
     }
 }
-
 for(i=0; i<5; i++) {
     document.getElementById("day"+(i+1)).innerHTML = weekday[CheckDay(i)];
 }
-
 let coordinate = [-97.8561, 27.5159];
-
 <!--map -->
 function map() {
     mapboxgl.accessToken = myMapBox;
@@ -61,18 +55,14 @@ function draggableMarker(map){
     })
         .setLngLat(coordinate)
         .addTo(map);
-
     function onDragEnd() {
         const lngLat = marker.getLngLat();
         coordinates.style.display = 'block';
         coordinates.innerHTML = `Longitude: ${lngLat.lng}<br />Latitude: ${lngLat.lat}`;
         reverseGeocode(lngLat);
     }
-
     marker.on('dragend', onDragEnd);
 };
-// console.log(draggableMarker());
-
 function reverseGeocode(coordinates) {
     var baseUrl = 'https://api.mapbox.com';
     var endPoint = '/geocoding/v5/mapbox.places/';
@@ -86,34 +76,3 @@ function reverseGeocode(coordinates) {
             return data.features[0].place_name;
         });
 }
-// console.log(reverseGeocode());
-
-// function updatedInfo() {
-//
-//     fetch("http://api.openweathermap.org/data/2.5/forecast?q=" + onDragEnd.value + '&appid=f94de48a8d3f08bfb3da0b67ab2ed431&units=imperial')
-//         .then(response => response.json())
-//         .then(data => {
-//             console.log(data);
-//         })
-//         .catch(err => console.warn(err.message));
-//
-//     for(i=0; i<5; i++){
-//         document.getElementById("cityName" + (i+1) + "cityName").innerHTML = "Max:" + Number(features.query[0, 1]) +"°"
-//     }
-//
-// }
-//
-// console.log(updatedInfo());
-//
-// for(i=0; i<5; i++) {
-//     document.getElementById("place")+(i+1)).innerHTML
-// }
-
-// function setWeatherData(lng,lat) {
-//     $.get('https://api.openweathermap.org/data/2.5/onecall', {
-//         lat: marker.getLngLat().lat,
-//         lon: marker.getLngLat().lng,
-//         appid: WEATHER_MAP_TOKEN,
-//         units: "imperial",
-//         exclude: 'minutely,hourly,current,alerts'  //used to exclude certain timeframes
-//     })
