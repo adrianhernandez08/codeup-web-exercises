@@ -1,6 +1,5 @@
 * {
     color: black;
-    background: cornflowerblue;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #cityInput, #cityName, #inputContainer, button{
@@ -20,6 +19,7 @@
     width: 1300px;
     border: 5px solid gray;
     border-radius: 10px;
+    background: white;
 }
 #iconsContainer{
     position: absolute;

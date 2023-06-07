@@ -1,5 +1,5 @@
 function getInfo(){
-    let newName= document.getElementById("cityInput");
+    const newName= document.getElementById("cityInput");
     const cityName=document.getElementById("cityName");
     cityName.innerHTML="--"+newName.value+"--"
 
@@ -27,10 +27,10 @@ const d =new Date();
 const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 function CheckDay(day){
     if(day +d.getDay() > 6){
-        return day + d.getDay()-7;
+        return day +d.getDay()-7;
     }
     else{
-        return d.getDay();
+        return day +d.getDay();
     }
 }
 for(i=0; i<5; i++) {
@@ -59,20 +59,24 @@ function draggableMarker(map){
         const lngLat = marker.getLngLat();
         coordinates.style.display = 'block';
         coordinates.innerHTML = `Longitude: ${lngLat.lng}<br />Latitude: ${lngLat.lat}`;
-        reverseGeocode(lngLat);
+        reverseGeocode(lngLat).then(function(location){
+            console.log(location);
+        })
     }
     marker.on('dragend', onDragEnd);
 };
 function reverseGeocode(coordinates) {
     var baseUrl = 'https://api.mapbox.com';
     var endPoint = '/geocoding/v5/mapbox.places/';
-    return fetch(baseUrl + endPoint + coordinates.lng + "," + coordinates.lat + '.json' + "?access_token=" + myMapBox )
+    return fetch(baseUrl + endPoint + coordinates.lng + "," + coordinates.lat + '.json' + "?access_token=" + myMapBox)
         .then(function (res) {
             return res.json();
         })
         // to get all the data from the request, comment out the following three lines...
         .then(function (data) {
             console.log(data);
-            return data.features[0].place_name;
+            return data.features[0].text;
+
         });
+
 }
